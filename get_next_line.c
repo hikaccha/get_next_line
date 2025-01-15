@@ -6,7 +6,7 @@
 /*   By: hichikaw <hichikaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 18:37:47 by hichikaw          #+#    #+#             */
-/*   Updated: 2024/12/25 12:01:59 by hichikaw         ###   ########.fr       */
+/*   Updated: 2025/01/03 16:11:25 by hichikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-buffer = read_to_buffer(fd, buffer);
+	buffer = read_to_buffer(fd, buffer);
 	if (!buffer)
 		return (NULL);
 	return (extract_line(&buffer));

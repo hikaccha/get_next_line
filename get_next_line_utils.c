@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hichikaw <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hichikaw <hichikaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 18:42:56 by hichikaw          #+#    #+#             */
-/*   Updated: 2025/01/02 23:00:31 by hichikaw         ###   ########.fr       */
+/*   Updated: 2025/01/23 13:38:38 by hichikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlen(const char *str)
 	size_t	len;
 
 	len = 0;
+	if (!str)
+		return (len);
 	while (str && str[len])
 		len++;
 	return (len);
@@ -57,7 +59,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(char *s)
 {
 	size_t	len;
 	char	*dup;
@@ -77,7 +79,7 @@ char	*ft_strdup(const char *s)
 	return (dup);
 }
 
-char	*ft_strndup(const char *s, size_t n)
+char	*ft_strndup(char *s, size_t n)
 {
 	size_t	len;
 	char	*dup;
